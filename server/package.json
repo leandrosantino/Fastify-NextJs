@@ -1,0 +1,38 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "webpack",
+    "deploy": "tsx ./deploy.ts",
+    "server": "node build/server/index",
+    "db.migrate": "npx prisma migrate dev",
+    "db.studio": "npx prisma studio",
+    "db.seed": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/static": "^6.10.1",
+    "@prisma/client": "^4.13.0",
+    "fastify": "^4.17.0"
+  },
+  "devDependencies": {
+    "@types/ncp": "^2.0.5",
+    "@types/node": "^20.1.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "ncp": "^2.0.0",
+    "prisma": "^4.13.0",
+    "rimraf": "^5.0.0",
+    "ts-loader": "^9.4.2",
+    "tsconfig-paths-webpack-plugin": "^4.0.1",
+    "tsx": "^3.12.7",
+    "typescript": "^5.0.4",
+    "webpack": "^5.82.0",
+    "webpack-cli": "^5.0.2",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
